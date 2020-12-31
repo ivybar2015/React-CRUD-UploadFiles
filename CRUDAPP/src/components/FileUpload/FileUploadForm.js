@@ -26,7 +26,7 @@ class FileUploadForm extends React.Component {
     // this.fileUpload(this.state.file).then((response)=>{
     //   console.log(response.data);
     // })
-    const apiurl = `https://localhost:44334/api/userimage/addtodb`;
+    const apiurl = `https://localhost:44388/api/userimage/addtodb`;
     const formDataData = {
         UserId: this.props.UserId,
         Label: this.state.label,
