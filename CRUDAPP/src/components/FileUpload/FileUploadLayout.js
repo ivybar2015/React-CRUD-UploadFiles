@@ -21,6 +21,7 @@ class FileUploadLayout extends React.Component {
     
     const isAlert = false; 
     return (
+      <div className="input-form">
       <React.Fragment>
         <Container>    
           <div className="row">
@@ -41,6 +42,7 @@ class FileUploadLayout extends React.Component {
             </div>
         </Container>
       </React.Fragment>
+      </div>
     )
   }
 }

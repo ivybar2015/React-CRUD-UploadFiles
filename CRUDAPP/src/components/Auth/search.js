@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import BrowserRouter from "react-router-dom";
 import axios from "axios";
+import "./authlayout.css";
 
 
 class Search extends Component {

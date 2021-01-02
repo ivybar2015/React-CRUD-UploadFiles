@@ -39,6 +39,7 @@ class FileUploadList extends React.Component {
     
     const isAlert = false; 
     return (
+      <div className="input-form">
       <React.Fragment>
         <table className="table">
         <thead>
@@ -64,6 +65,7 @@ class FileUploadList extends React.Component {
         </tbody>
         </table>
       </React.Fragment>
+      </div>
       )
     }
 }

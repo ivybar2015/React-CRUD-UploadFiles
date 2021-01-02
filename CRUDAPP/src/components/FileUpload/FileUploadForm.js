@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Form, Button, Alert, Card } from 'react-bootstrap';
 import './FileUploadForm.css';
 import FileUploadList from './FileUploadList';
+
+
+
 class FileUploadForm extends React.Component {
 
   constructor(props) {
@@ -51,7 +54,8 @@ class FileUploadForm extends React.Component {
       .then(function (response) {
           //handle success
           parent.props.onAddFile();
-
+          this.props.history.push('/filelist')
+         
           // console.log(response);
       })
       .catch(function (response) {
@@ -80,15 +84,17 @@ class FileUploadForm extends React.Component {
 
   render() {
     
+    
     const isAlert = false; 
     return (
+      <div className="input-form">
       <React.Fragment>
         <Form onSubmit={this.onFormSubmit}>
           <div className="row">
             <div className="col">
               <input type="hidden" name="UserID" value="1" />
                 <Form.Group >
-                  <Form.Label className="left">Title</Form.Label>
+                  <Form.Label className="right ml-20">Title</Form.Label>
                   <Form.Control type="text" placeholder="File Title" name="Label" id="Label" onChange={this.onChangeInput.bind(this)}/>
                   <Form.Text className="text-muted">
                   Title for Searching
@@ -99,7 +105,7 @@ class FileUploadForm extends React.Component {
           <div className="row mt-3">
             <div className="col">
             <Form.Group >
-              <Form.Label className="left ml-5">Choose a file</Form.Label>
+              <Form.Label className="right ml-20">Choose a file</Form.Label>
               <Form.File 
                 id="custom-file"
                 label={this.state.filename}                    
@@ -120,6 +126,7 @@ class FileUploadForm extends React.Component {
         </Form>
 
       </React.Fragment>
+      </div>
     )
   }
 }

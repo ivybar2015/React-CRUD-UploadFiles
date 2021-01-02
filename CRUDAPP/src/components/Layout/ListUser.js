@@ -5,7 +5,9 @@ import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //npmimport Delete from "./components/Auth/Delete";
+import "./layout.css";
 
 
 
@@ -21,12 +23,12 @@ class ListUser extends Component {
     }
     componentDidMount() {
         // get HTTP request and stored data
-        const ApiUrl = "http://localhost:62458/api/user/getusers";
+        const ApiUrl = "https://localhost:44388/api/users/allusers";
         axios.get(ApiUrl, {}).then(response => {
-            console.log(response.data.dbase);
+            console.log(response.data.db);
             // get data to the list , dbase is database were return from web api
             this.setState({
-                data: response.data.dbase
+                data: response.data.db
 
             })
         }
@@ -37,10 +39,11 @@ class ListUser extends Component {
     render() {
 
         return (
+            <div className="input-form">
             <section>
                 <h1> List Of Users </h1>
                 <div>
-                    <table>
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -84,6 +87,7 @@ class ListUser extends Component {
                 </div>
 
             </section>
+            </div>
 
         )
     }

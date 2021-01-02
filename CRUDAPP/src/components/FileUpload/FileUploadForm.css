@@ -22,4 +22,18 @@
       height: auto;
       border-radius: 50%;
     }
-    
+  .input-form
+  {
+    text-align: left;
+    /* button on the right of form */
+    display: flex;
+    color: black;
+    padding: 70px;
+    margin: 40px;
+
+}
+.text-right{
+    text-align: right;
+    color: blue;
+
+}

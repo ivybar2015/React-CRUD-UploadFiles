@@ -64,10 +64,11 @@ namespace CRUDApp.Controllers
             {
                 // object name of newRecordTable
                 User newRecordTable = new User();
-
+                
                 newRecordTable.Username = getinput.userName;
                 newRecordTable.Password = getinput.passWord;
                 newRecordTable.FirstName = getinput.firstName;
+                newRecordTable.LastName = getinput.lasttName;
                 newRecordTable.IsActive = true;
                 newRecordTable.DateCreated = DateTime.Now;
 

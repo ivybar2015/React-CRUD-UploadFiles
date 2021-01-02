@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 //import home from "./components/Layout/Home";
+import "./authlayout.css";
 
 
 class Login extends Component {
@@ -43,7 +44,7 @@ class Login extends Component {
     };
 
     // getting  data from out of 'state' to add to table database
-    const apiUrl = "http://localhost:62458/api/user/login";
+    const apiUrl = "https://localhost:44388/api/users/login";
 
     axios
       .post(apiUrl, data) //.then((Response) => Response.json())
@@ -67,6 +68,7 @@ class Login extends Component {
 
   render() {
     return (
+      <div className="input-form">
       <React.Fragment>
 
         <br></br>
@@ -108,6 +110,7 @@ class Login extends Component {
           ></input>
         </form>
       </React.Fragment>
+      </div>
     );
   }
 }

@@ -44,7 +44,7 @@ class Edit extends Component {
         // We can use the `useParams` hook here to access the dynamic pieces of the URL.
 
         event.preventDefault();
-        const apiurl = "http://localhost:62458/api/user/update";
+        const apiurl = "https://localhost:44388/api/users/edituser";
         const recored = {
 
             //get id passe

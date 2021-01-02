@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./authlayout.css";
 
 class Register extends Component {
   constructor(props) {
     super(props);
     // initilize variable
     this.state = {
-      username: "",
-      firstname: "",
-      lastname: "",
+      userName: "",
+      passWord: "",
+      firstName: "",
+      lasttName: "",
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,14 +28,15 @@ class Register extends Component {
     event.preventDefault();
     // getting  data from out of 'state' to add to table database
     axios
-      .post("http://localhost:62458/api/user/add", {
-        username: this.state.username,
-        firstname: this.state.firstname,
-        lastname: this.state.lastname,
+      .post("https://localhost:44388/api/users/addusers", {
+        userName: this.state.userName,
+        passWord: this.state.passWord,
+        firstName: this.state.firstName,
+        lasttName: this.state.lasttName,
       })
       .then((res) => {
         console.log(res);
-        console.log(res.dbase);
+        console.log(res.db);
         // go to listuser page
         this.props.history.push('/listuser')
       });
@@ -41,17 +44,18 @@ class Register extends Component {
 
   render() {
     return (
+      <div className="input-form">
       <React.Fragment>
         <br></br>
         <form onSubmit={this.handleSubmit}>
           <div>
             <input
               type="text"
-              id="username"
+              id="userName"
               // holde current value
-              value={this.state.username}
-              // name have to match with username of state and will hole username 'input'
-              name="username"
+              value={this.state.userName}
+              // name have to match with userName of state and will hole userName 'input'
+              name="userName"
               placeholder="User Name"
               // after got input call  handleChange() and  passing  'event'
               onChange={this.handleInput}
@@ -60,11 +64,25 @@ class Register extends Component {
           <br></br>
           <div>
             <input
-              type="text"
-              id="firstname"
-              name="firstname"
+              type="password"
+              id="passWord"
               // holde current value
-              value={this.state.firstname}
+              value={this.state.userName}
+              // name have to match with passWord of state and will hole passWord 'input'
+              name="passWord"
+              placeholder="PassWord"
+              // after got input call  handleChange() and  passing  'event'
+              onChange={this.handleInput}
+            ></input>
+          </div>
+          <br></br>
+          <div>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              // holde current value
+              value={this.state.firstName}
               placeholder="First Name"
               // after got input then pass 'event' into handleChange()
               onChange={this.handleInput}
@@ -75,9 +93,9 @@ class Register extends Component {
             <input
               type="text"
               // holde current value
-              id="lastname"
-              name="lastname"
-              value={this.state.lastname}
+              id="lasttName"
+              name="lasttName"
+              value={this.state.lasttName}
               placeholder="Last Name"
               // after got input then pass 'event' into handleChange()
               onChange={this.handleInput}
@@ -88,6 +106,7 @@ class Register extends Component {
           <input type="submit" color="primary" value="Register"></input>
         </form>
       </React.Fragment>
+      </div>
     );
   }
 }
