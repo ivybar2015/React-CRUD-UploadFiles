@@ -19,21 +19,16 @@ class Edit extends Component {
         // let bind to funtion update value
         this.userName = this.userName.bind(this);
         this.firstName = this.firstName.bind(this);
-        this.lastName = this.lastName.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
     }
 
     userName(event) {
-        this.setState({ username: event.target.value });
+        this.setState({ useName: event.target.value });
     }
 
     firstName(event) {
-        this.setState({ firstname: event.target.value });
-    }
-
-    lastName(event) {
-        this.setState({ lastname: event.target.value });
+        this.setState({ firstName: event.target.value });
     }
 
     handleCancel() {
@@ -49,9 +44,8 @@ class Edit extends Component {
 
             //get id passe
             Id: this.props.match.params.id,
-            username: this.state.username,
-            firstname: this.state.firstname,
-            lastname: this.state.lastname
+            useName: this.state.useName,
+            firstName: this.state.firstName,
 
         }
 
@@ -73,11 +67,11 @@ class Edit extends Component {
                             <label> User Name  </label>
                             <input
                                 type="text"
-                                id="username"
+                                id="useName"
                                 // holde current value
-                                value={this.state.username}
+                                value={this.state.useName}
                                 // name have to match with username of state and will hole username 'input'
-                                name="Username"
+                                name="useName"
                                 placeholder="User Name"
                                 // after got input call  handleChange() and  passing  'event'
                                 onChange={this.userName}
@@ -89,33 +83,18 @@ class Edit extends Component {
                             <label> First Name  </label>
                             <input
                                 type="text"
-                                id="firstname"
+                                id="firstName"
                                 // holde current value
-                                value={this.state.firstname}
+                                value={this.state.firstName}
                                 // name have to match with username of state and will hole username 'input'
-                                name="Firstname"
+                                name="firstName"
                                 placeholder="User Name"
                                 // after got input call  handleChange() and  passing  'event'
                                 onChange={this.firstName}
                             ></input>
                         </di>
-                        <br></br>
-
-                        <div>
-                            <label> Last Name  </label>
-                            <input
-                                type="text"
-                                id="lastname"
-                                // holde current value
-                                value={this.state.lastname}
-                                // name have to match with username of state and will hole username 'input'
-                                name="Username"
-                                placeholder="Last Name"
-                                // after got input call  handleChange() and  passing  'event'
-                                onChange={this.lastName}
-                            ></input>
+            
                             <br></br>
-                        </div>
 
                         <br />
                         {/* put button on the form 'finished' */}

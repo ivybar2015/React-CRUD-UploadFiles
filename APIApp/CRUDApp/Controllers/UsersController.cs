@@ -68,7 +68,7 @@ namespace CRUDApp.Controllers
                 newRecordTable.Username = getinput.userName;
                 newRecordTable.Password = getinput.passWord;
                 newRecordTable.FirstName = getinput.firstName;
-                newRecordTable.LastName = getinput.lasttName;
+                newRecordTable.LastName = getinput.lastName;
                 newRecordTable.IsActive = true;
                 newRecordTable.DateCreated = DateTime.Now;
 
@@ -170,6 +170,38 @@ namespace CRUDApp.Controllers
 
         }
         ////////////////////
+        [HttpPost]
+        [Route("searchuser")]
+        public object SearchUserData(SearchUserName1 ginput)
+        {
+
+
+            var recordcheck = db.Users.Where(col => col.LastName == ginput.lastName);
+            try
+            {
+               // var getinput = db.Users.Find(ginput.lastName);
+                if (recordcheck != null)
+                {
+     
+                    return new { status = 200, msg = "Success", db = recordcheck };
+
+
+                }
+
+                return null;
+
+
+            }
+            catch (Exception e)
+            {
+                return new { status = 404, msg = "Error" + e.InnerException };
+
+            }
+
+        }
+
+        ////////////////////
+        /// <param name="disposing"></param>
 
         //[HttpGet]
         //[Route("valueusers")]

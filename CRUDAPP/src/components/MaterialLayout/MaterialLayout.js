@@ -112,6 +112,14 @@ export default function MaterialLayout() {
               <ListItemText primary="Login" />
             </ListItem>
 
+                        {/* ///////////////////// */}
+           <ListItem button component={Link} to="/alert">
+              <ListItemIcon>
+                <ExitToAppOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText primary="Alert" />
+            </ListItem>
+
             {/* ///////////////////// */}
             <ListItem button component={Link} to="/register">
               <ListItemIcon>

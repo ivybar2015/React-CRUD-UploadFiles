@@ -10,7 +10,7 @@ class Register extends Component {
       userName: "",
       passWord: "",
       firstName: "",
-      lasttName: "",
+      lastName: "",
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,7 +32,7 @@ class Register extends Component {
         userName: this.state.userName,
         passWord: this.state.passWord,
         firstName: this.state.firstName,
-        lasttName: this.state.lasttName,
+        lastName: this.state.lastName,
       })
       .then((res) => {
         console.log(res);
@@ -93,9 +93,9 @@ class Register extends Component {
             <input
               type="text"
               // holde current value
-              id="lasttName"
-              name="lasttName"
-              value={this.state.lasttName}
+              id="lastName"
+              name="lastName"
+              value={this.state.lastName}
               placeholder="Last Name"
               // after got input then pass 'event' into handleChange()
               onChange={this.handleInput}
