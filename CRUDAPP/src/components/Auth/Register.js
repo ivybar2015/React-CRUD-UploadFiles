@@ -67,7 +67,7 @@ class Register extends Component {
               type="password"
               id="passWord"
               // holde current value
-              value={this.state.userName}
+              value={this.state.password}
               // name have to match with passWord of state and will hole passWord 'input'
               name="passWord"
               placeholder="PassWord"
