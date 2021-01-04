@@ -6,7 +6,7 @@ import './FileUploadForm.css';
 
 function DeleteFile(props) {
     // get url and id 
-    const apiurl = "https://localhost:44388/api/userimage/deleteuser?id=" + props.match.params.id;
+    const apiurl = "https://localhost:44388/api/userimage/deletefile?id=" + props.match.params.id;
     axios.post(apiurl)
         .then(res => {
             console.log(res.db)

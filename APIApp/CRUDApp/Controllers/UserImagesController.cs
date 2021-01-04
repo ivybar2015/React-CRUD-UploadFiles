@@ -103,7 +103,7 @@ namespace CRUDApp.Controllers
 
         //////////////////////////////////
         [HttpPost]
-        [Route("deleteuser")]
+        [Route("deletefile")]
         public object DelteUserData(int id)
         {
             try
