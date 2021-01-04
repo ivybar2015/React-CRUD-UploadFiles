@@ -1,10 +1,13 @@
-import React from 'react'
-import axios, { post } from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
+import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
+import DeleteIcon from '@material-ui/icons/Delete';
+//import EditIcon from '@material-ui/icons/Edit';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Form, Button, Alert, Card } from 'react-bootstrap';
 import './FileUploadForm.css';
 
-class FileUploadList extends React.Component {
+class FileUploadList extends Component {
 
     constructor(props) {
         super(props);
@@ -48,6 +51,7 @@ class FileUploadList extends React.Component {
             <th scope="col">Label</th>
             <th scope="col">Size</th>
             <th scope="col">MimeType</th>
+            <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody style={{height: '10px !important', overflow: 'scroll'}}>
@@ -57,7 +61,15 @@ class FileUploadList extends React.Component {
                 <td><img src={`data:${data.MimeType};base64,${data.ImageData}`} className="table-image"/></td>                
                 <td>{data.Label}</td>                
                 <td>{data.Size}</td>
-                <td>{data.MimeType}</td>                
+                <td>{data.MimeType}</td>        
+                <td>
+                <Link to={`/deleted/${data.ImageId}`} >
+                    <Button color="secondary">
+                    <DeleteIcon />
+                    </Button>
+                    </Link>
+                    {/*  <Delete isDalete={`/delete/${index.Id}`} />*/}
+                </td>        
               </tr>
               )
            })}

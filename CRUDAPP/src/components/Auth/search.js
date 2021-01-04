@@ -70,7 +70,7 @@ class Search extends Component {
             </div>
             <br />
             {/* put button on the form 'finished' */}
-            <div className="text-right"   >
+            <div className="text-left">
                 <input
                 type="submit"
                 color="primary"
@@ -79,6 +79,7 @@ class Search extends Component {
                 </input>
                 <button onClick={this.handleCancel}>Cancel </button>
 
+                {/*call function SearchList if not click on CANCEL button */}
                 < SearchList searchuser = {this.state.data}></SearchList>
                
             </div>

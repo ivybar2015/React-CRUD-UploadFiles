@@ -19,6 +19,7 @@ import Delete from "./components/Auth/Delete";
 import UploadFile from "./components/FileUpload/FileUploadForm";
 import FileList from "./components/FileUpload/FileUploadList";
 import SweetAlertComp from "./components/File-Form/SweetAlert";
+import Deleted from "./components/FileUpload/DeleteFile";
 
 
 
@@ -50,6 +51,9 @@ class App extends Component {
             <Route path="/listuser" component={ListUser} />
             <Route path="/edit/:id" component={Edit} />
             <Route path="/delete/:id" component={Delete} />
+            <Route path="/deleted/:id" component={Deleted} />
+
+            
             <Route path="/search" component={Search} />
             <Route path="/alert" component={SweetAlertComp} />
             

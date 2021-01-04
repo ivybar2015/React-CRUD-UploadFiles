@@ -8,7 +8,7 @@ function SearchList(props) {
     return (
         <div className="input-form">
         <section>
-                <h1> List Of Users </h1>
+                <h1> List Of Users Search </h1>
                 <div>
                     <table className="table">
                         <thead>

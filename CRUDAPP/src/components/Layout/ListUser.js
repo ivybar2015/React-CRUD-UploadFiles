@@ -46,7 +46,7 @@ class ListUser extends Component {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>Edit</th>
                                 <th>UserName</th>
                                 <th>Password</th>
                                 <th>FirstName</th>

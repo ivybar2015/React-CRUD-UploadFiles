@@ -101,6 +101,35 @@ namespace CRUDApp.Controllers
             }
         }
 
+        //////////////////////////////////
+        [HttpPost]
+        [Route("deleteuser")]
+        public object DelteUserData(int id)
+        {
+            try
+            {
+                using (PortfolioDBEntities db = new PortfolioDBEntities())
+                {
+    
+                    UserImage getIdRecord = db.UserImages.Find(id);
+                    if (getIdRecord == null)
+                    {
+                        return NotFound();
+                    }
+
+                    db.UserImages.Remove(getIdRecord);
+                    db.SaveChanges();
+                    return Ok(getIdRecord);
+                }
+
+            }
+            catch (System.Exception e)
+            {
+                return new { status = StatusCodes.NotFound.code, msg = e.InnerException, data = 0 };
+            }
+
+        }
+
 
     }
 }
