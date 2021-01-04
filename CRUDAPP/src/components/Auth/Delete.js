@@ -11,7 +11,7 @@ function Delete(props) {
     const apiurl = "https://localhost:44388/api/users/deleteuser?id=" + props.match.params.id;
     axios.post(apiurl)
         .then(res => {
-            console.log(res.dbase)
+            console.log(res.db)
         })
     return (
         <div className="input-form">

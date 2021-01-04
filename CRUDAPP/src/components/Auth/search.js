@@ -2,6 +2,7 @@ import React, { Component } from "react";
 //import BrowserRouter from "react-router-dom";
 import axios from "axios";
 import "./authlayout.css";
+import SearchList from "./SearchList";
 
 
 class Search extends Component {
@@ -9,6 +10,7 @@ class Search extends Component {
         super(props)
         this.state = {
             lastName: "",
+            data: [],
         };
 
         this.handleInput = this.handleInput.bind(this);
@@ -39,6 +41,9 @@ class Search extends Component {
       .then((res) => {
         console.log(res);
         console.log(res.db);
+        this.setState({ data: res.data.db })
+       // data: this.state.data.db;
+
         // go to listuser page
        //this.props.history.push('/listuser')
       });
@@ -65,18 +70,18 @@ class Search extends Component {
             </div>
             <br />
             {/* put button on the form 'finished' */}
-                                    {/* put button on the form 'finished' */}
-                                    <div className="text-right"   >
-                            <input
+            <div className="text-right"   >
+                <input
+                type="submit"
+                color="primary"
+                value="submit" 
+                >
+                </input>
+                <button onClick={this.handleCancel}>Cancel </button>
 
-                                type="submit"
-                                color="primary"
-                                value="submit"
-                            ></input>
-
-                            <button onClick={this.handleCancel}>Cancel </button>
-
-                        </div>
+                < SearchList searchuser = {this.state.data}></SearchList>
+               
+            </div>
           </form>
         </React.Fragment>
         </div>
