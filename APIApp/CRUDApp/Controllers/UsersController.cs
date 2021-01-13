@@ -179,16 +179,13 @@ namespace CRUDApp.Controllers
             var recordcheck = db.Users.Where(col => col.LastName == ginput.lastName);
             try
             {
-               // var getinput = db.Users.Find(ginput.lastName);
-                if (recordcheck != null)
-                {
-     
-                    return new { status = 200, msg = "Success", db = recordcheck };
 
-
-                }
-
-                return null;
+                // var getinput = db.Users.Find(ginput.lastName);
+                if (recordcheck == null)
+                    return new { status = 404, msg = "Search Not Match " };
+              
+                else
+                    return new { status = 201, msg = "Success", db = recordcheck };
 
 
             }

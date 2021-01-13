@@ -43,31 +43,29 @@ class App extends Component {
       <BrowserRouter>
         {/* get MaterialLayout first then MaterialLayout will connect all the path of its component*/}
         <MaterialLayout />
-        <Switch>
-          <div className="container">
-            {/* {About} {Contacts} {MatCard} are for component*/}
-            {/* use 'LINK' to connect the pahts*/}
-            <Route path="/home" component={Home} />
-            <Route path="/listuser" component={ListUser} />
-            <Route path="/edit/:id" component={Edit} />
-            <Route path="/delete/:id" component={Delete} />
-            <Route path="/deleted/:id" component={Deleted} />
+            <div className="container">
+              {/* {About} {Contacts} {MatCard} are for component*/}
+              {/* use 'LINK' to connect the pahts*/}
+              <Route  path="/home" component={Home} exact = {true} />
+              <Route path="/listuser" component={ListUser} exact = {true}  />
+              <Route path="/edit/:id" component={Edit} exact = {true} />
+              <Route path="/delete/:id" component={Delete} exact = {true}  />
+              <Route path="/deleted/:id" component={Deleted} exact = {true}  />
 
-            
-            <Route path="/search" component={Search} />
-            <Route path="/alert" component={SweetAlertComp} />
-            
+              
+              <Route path="/search" component={Search} exact = {true} />
+              <Route path="/alert" component={SweetAlertComp} exact = {true} />
+              
 
-            <Route path="/login" component={Login} />
+              <Route path="/login" component={Login} exact = {true}  />
 
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contacts} />
-            <Route path="/mcard" component={MatCard} />
-            <Route path="/register" component={Register} />
-            <Route path="/uploadfile" component={UploadFile} />
-            <Route path="/filelist" component={FileList} />
-          </div>
-        </Switch>
+              <Route path="/about" component={About} exact = {true} />
+              <Route path="/contact" component={Contacts} exact = {true} />
+              <Route path="/mcard" component={MatCard} exact = {true} />
+              <Route path="/register" component={Register} exact = {true} />
+              <Route path="/uploadfile" component={UploadFile} exact = {true} />
+              <Route path="/filelist" component={FileList} exact = {true} />
+            </div>
       </BrowserRouter>
 
     );

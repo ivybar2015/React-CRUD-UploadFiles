@@ -46,12 +46,11 @@ namespace CRUDApp.Controllers
                 {
                     // Read the form data.
                     await Request.Content.ReadAsMultipartAsync(provider);
-                    var uniqueFileName = "";
+                  //  var uniqueFileName = "";
                     NameValueCollection formdata = provider.FormData;
 
                     UserImage ProfileForm = new UserImage();
                     ProfileForm.UserId = int.Parse(formdata["UserId"]);
-                    ProfileForm.IsActive = true;
                     ProfileForm.IsActive = true;
                     ProfileForm.Label = formdata["Label"];
                     ProfileForm.DateUploaded = today;
@@ -129,6 +128,7 @@ namespace CRUDApp.Controllers
             }
 
         }
+
 
 
     }
