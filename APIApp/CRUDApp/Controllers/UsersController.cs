@@ -175,8 +175,8 @@ namespace CRUDApp.Controllers
         public object SearchUserData(SearchUserName1 ginput)
         {
 
-
-            var recordcheck = db.Users.Where(col => col.LastName == ginput.lastName);
+            // used "Contains" to search all the LastName inclued string input
+            var recordcheck = db.Users.Where(col => col.LastName.Contains(ginput.lastName));
             try
             {
 
