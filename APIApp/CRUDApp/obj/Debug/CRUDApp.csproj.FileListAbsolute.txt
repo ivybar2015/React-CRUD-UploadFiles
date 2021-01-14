@@ -175,3 +175,4 @@ C:\Projects\ReactWebApp\React-CRUD-UploadFiles\APIApp\CRUDApp\bin\System.Web.Cor
 C:\Projects\ReactWebApp\React-CRUD-UploadFiles\APIApp\CRUDApp\bin\System.Web.Http.Cors.dll
 C:\Projects\ReactWebApp\React-CRUD-UploadFiles\APIApp\CRUDApp\bin\WebActivatorEx.dll
 C:\Projects\ReactWebApp\React-CRUD-UploadFiles\APIApp\CRUDApp\bin\System.Web.Http.Cors.xml
+C:\Projects\ReactWebApp\React-CRUD-UploadFiles\APIApp\CRUDApp\obj\Debug\CRUDApp.csprojAssemblyReference.cache

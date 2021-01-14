@@ -47,7 +47,7 @@ class FileUploadList extends Component {
         <table className="table">
         <thead>
             <tr>
-            <th scope="col">#</th>
+            <th scope="col">Img</th>
             <th scope="col">Label</th>
             <th scope="col">Size</th>
             <th scope="col">MimeType</th>

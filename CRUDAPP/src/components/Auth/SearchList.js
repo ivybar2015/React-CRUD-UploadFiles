@@ -11,7 +11,7 @@ function SearchList(props) {
             <div className="input-form">
             
             <section>
-                    <h1> List Of Users Search </h1>
+                    <h1> List Searching </h1>
                     <div>
                         <table className="table">
                             <thead>
