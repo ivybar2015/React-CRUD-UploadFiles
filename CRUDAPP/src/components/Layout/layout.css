@@ -6,7 +6,8 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    /* put evrything in center */
+    max-width: 500px;
 }
 /* used hover to zoom pic */
 .welcome-pic:hover {
@@ -17,16 +18,16 @@
 
 .input-form
 {
-    text-align: left;
+    text-align: center;
     /* button on the right of form */
     display: flex;
     color: black;
-    padding: 70px;
-    margin: 40px;
-
+    margin-left: auto;
+    margin-right: auto;
 }
 .text-right{
-    text-align: right;
+    text-align: center;
     color: blue;
+    
 
 }

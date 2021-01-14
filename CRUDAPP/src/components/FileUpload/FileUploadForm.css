@@ -1,7 +1,8 @@
 .container {
+    text-align: center;
     margin: auto;
-    width: 100%;    
     padding: 10px;
+    max-width: 500px;
   }
    
   .center {
@@ -33,7 +34,7 @@
 
 }
 .text-right{
-    text-align: right;
+    text-align: left;
     color: blue;
 
 }
