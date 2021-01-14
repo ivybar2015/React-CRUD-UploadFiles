@@ -51,16 +51,12 @@ class FileUploadForm extends React.Component {
       data: formData,
       headers: {'Content-Type': 'multipart/form-data' }
       })
-      .then(function (response) {
+      .then( (response)=> {
           //handle success
-          parent.props.onAddFile();
-          this.props.history.push('/filelist')
-         
-          // console.log(response);
-      })
-      .catch(function (response) {
-          //handle error
           console.log(response);
+         // parent.props.onAddFile();
+          this.props.history.push('/filelist')  
+
     });
   }
 

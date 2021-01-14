@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./authlayout.css";
+import { Label } from "@material-ui/icons";
 
 class Register extends Component {
   constructor(props) {
@@ -44,10 +45,16 @@ class Register extends Component {
 
   render() {
     return (
+      
       <div className="input-form">
+      
       <React.Fragment>
+ 
         <br></br>
-        <form onSubmit={this.handleSubmit}>
+
+        <form onSubmit={this.handleSubmit}> Create An Account:
+        <br></br>
+        <br></br>
           <div>
             <input
               type="text"
