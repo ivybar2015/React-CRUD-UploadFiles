@@ -37,17 +37,17 @@
   width: 100%;
 }
 
-.table td{
+/* to access td of th of table class  */
+.table td, table th{
     border: 1px solid #ddd;
     padding: 8px;
   }
-  .table th{
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-.table tr:nth-child(even){background-color: #f2f2f2;}
+  /* to access tr and nth children  of table class  */
+.table tr:nth-child(even){
+    background-color: #f2f2f2;}
 
-.table tr:hover {background-color: #ddd;}
+.table tr:hover {
+    background-color: #ddd;}
 
 .table th {
   padding-top: 12px;
@@ -57,4 +57,11 @@
   color: white;
 }
   
-  
+.Clock {
+  padding: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  /* put evrything in center */
+  width: 500px;
+
+}

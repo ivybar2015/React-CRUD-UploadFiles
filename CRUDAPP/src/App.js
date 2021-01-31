@@ -46,6 +46,7 @@ class App extends Component {
             <div className="container">
               {/* {About} {Contacts} {MatCard} are for component*/}
               {/* use 'LINK' to connect the pahts*/}
+              <Route  path="/" component={Home} exact = {true} />
               <Route  path="/home" component={Home} exact = {true} />
               <Route path="/listuser" component={ListUser} exact = {true}  />
               <Route path="/edit/:id" component={Edit} exact = {true} />

@@ -1,5 +1,9 @@
 body {
-  margin: 0;
+  /* to put everthing in the center */
+margin-right: auto;
+margin-left: auto;
+width: 1024px;
+ /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
